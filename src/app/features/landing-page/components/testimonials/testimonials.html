@@ -1,0 +1,16 @@
+<section class="bg-[#0b0b0b] text-white py-24 border-b border-zinc-900">
+  <div class="max-w-7xl mx-auto px-6">
+    <span class="text-amber-500 font-semibold tracking-widest uppercase text-xs">Depoimentos</span>
+    <h2 class="text-3xl md:text-4xl font-extrabold uppercase mt-2 mb-12">O que nossos clientes dizem</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      @for (review of reviews; track review.name) {
+        <div class="bg-zinc-900/50 border border-zinc-800 p-6 rounded-xl space-y-3">
+          <p class="text-amber-500 text-sm">{{ review.rating }}</p>
+          <p class="text-zinc-300 text-xs italic leading-relaxed">"{{ review.text }}"</p>
+          <p class="text-white font-bold text-xs pt-2 border-t border-zinc-800/80">{{ review.name }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

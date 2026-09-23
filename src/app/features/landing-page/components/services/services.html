@@ -1,0 +1,37 @@
+<section id="servicos" class="bg-[#0b0b0b] text-white py-24 border-b border-zinc-900">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+      <div>
+        <span class="text-amber-500 font-semibold tracking-widest uppercase text-xs">Nossos Serviços</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold uppercase mt-2">Serviços que valorizam o seu estilo</h2>
+      </div>
+      <p class="text-zinc-400 text-xs max-w-md">
+        Do clássico ao moderno, temos o serviço ideal para você. Todos os serviços são realizados com produtos de alta qualidade e profissionais especializados.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      @for (service of serviceList; track service.title) {
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden hover:border-amber-500/50 transition flex flex-col justify-between">
+          <div>
+            <div class="h-44 overflow-hidden">
+              <img [src]="service.image" [alt]="service.title" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-5 space-y-2">
+              <h3 class="font-bold text-base text-white">{{ service.title }}</h3>
+              <p class="text-zinc-400 text-xs leading-relaxed">{{ service.description }}</p>
+            </div>
+          </div>
+          <div class="p-5 pt-0 flex justify-between items-center mt-4">
+            <span class="text-amber-500 font-extrabold text-sm">{{ service.price }}</span>
+            <a href="#agendar" class="border border-zinc-700 hover:border-amber-500 text-zinc-300 hover:text-white text-xs px-3 py-1.5 rounded transition">
+              Agendar &rarr;
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
