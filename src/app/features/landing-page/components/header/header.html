@@ -33,13 +33,25 @@
       </a>
     </nav>
 
-    <!-- Botão de Ação (CTA) -->
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-3 md:gap-4">
+      
+      <!-- BOTÃO DE LOGIN -->
+      <a 
+        routerLink="/login" 
+        class="border border-zinc-800 hover:border-amber-500/50 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-300 hover:text-white font-bold uppercase text-xs px-4 py-2.5 rounded-lg transition duration-300 flex items-center gap-2">
+        <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
+        </svg>
+        <span>Entrar</span>
+      </a>
+
+      <!-- BOTÃO DE AGENDAMENTO (CTA) -->
       <a 
         href="#agendar" 
-        class="bg-amber-500 hover:bg-amber-400 text-black font-extrabold uppercase text-xs px-5 py-2.5 rounded transition shadow-lg shadow-amber-500/10">
+        class="bg-amber-500 hover:bg-amber-400 text-black font-extrabold uppercase text-xs px-5 py-2.5 rounded-lg transition shadow-lg shadow-amber-500/10">
         Agendar Agora
       </a>
+
     </div>
 
   </div>

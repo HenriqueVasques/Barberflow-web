@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './location.html',
   styleUrl: './location.css' // remova esta linha se não usar CSS próprio
 })
-export class Location {}
+export class Location {}    
